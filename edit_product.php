@@ -46,6 +46,7 @@ if(!$product){
 
 ?>
 <?php include_once('layouts/header.php'); ?>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <div class="row">
   <div class="col-md-12">
     <?php echo display_msg($msg); ?>
