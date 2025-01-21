@@ -15,7 +15,7 @@
 ?>
 <?php include_once('layouts/header.php'); ?>
 
-<link rel="stylesheet" href="path/to/main.css">
+<link rel="stylesheet" href="libs/css/main.css">
 
 <div class="row">
    <div class="col-md-6">
