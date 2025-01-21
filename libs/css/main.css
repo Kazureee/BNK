@@ -40,7 +40,7 @@ body{
 }
 
 .bg-green{
-  background-color: #A3C86D;
+  background-color: #282828;
 }
 .bg-blue{
   background-color: #7ACBEE;
@@ -49,15 +49,15 @@ body{
   background-color: #FDD761;
 }
 .bg-red{
-  background-color: #FF7857;
+  background-color: #282828;
 }
 
 .bg-secondary1{
-	background-color: #b17897;
+	background-color: #282828;
 }
 
 .bg-blue2{
-	background-color: #7a83ee;
+	background-color: #282828;
 }
 .panel-default >.panel-heading{
   background-color: #f5f5f5;
@@ -112,7 +112,7 @@ body{
     letter-spacing: 1px;
     display: inline-block;
     width: 250px;
-    background-color: #2e5964;
+    background-color: #282828;
 }.header-date{
   color: #9b9b9b;
   margin-left: 20px;
@@ -172,7 +172,7 @@ body{
   padding: 65px 0 0;
   height: 100%;
   width: 250px;
-  background: #272727;
+  background: #F5f3ee;
   border-right: 1px solid #ddd;
   text-align: center;
 }.sidebar ul li:hover,.submenu ul li:hover{
@@ -185,11 +185,11 @@ body{
 }.sidebar ul li {
   display: block;
 }.sidebar ul li:hover,ul.submenu{
-  background-color:#35404d;
+  background-color:#B3b4b0;
 }.sidebar ul li a:hover {
-  color: white;
+  color: black;
 }.sidebar ul li a,ul.submenu li a {
-  color: #aeb2b7;
+  color: #282828;
   display: block;
   overflow: hidden;
   position: relative;
@@ -198,18 +198,17 @@ body{
   text-align: left;
 }.sidebar ul li a span,.sidebar ul li i{
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 350;
   letter-spacing: 1.5px;
-  text-shadow: 0 1px rgba(0,0,0, 1);
 }.sidebar ul li a i{
-  color: #aeb2b7;
+  color: #282828;
   padding: 15px 22px;
   text-align: center;
 }ul.submenu{
   display: none;
   position: relative;
 }ul.submenu li a:hover{
-  background-color:#35404d;
+  background-color:#F5f3ee;
 }ul.submenu li a {
   padding-left: 45px;
 }ul.submenu li:before{

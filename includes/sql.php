@@ -180,11 +180,16 @@ function tableExists($table){
  /*--------------------------------------------------------------*/
  function find_by_groupLevel($level)
  {
-   global $db;
-   $sql = "SELECT group_level FROM user_groups WHERE group_level = '{$db->escape($level)}' LIMIT 1 ";
-   $result = $db->query($sql);
-   return($db->num_rows($result) === 0 ? true : false);
+     global $db;
+     $sql = "SELECT * FROM user_groups WHERE group_level = '{$db->escape($level)}' LIMIT 1";
+     $result = $db->query($sql);
+ 
+     if ($result && $db->num_rows($result) > 0) {
+         return $db->fetch_assoc($result); // Return the full row as an array
+     }
+     return null; // Return null if no matching group level is found
  }
+ 
 
  /*--------------------------------------------------------------*/
  /* Function for checking user level access to page
