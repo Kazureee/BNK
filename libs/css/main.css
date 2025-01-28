@@ -258,7 +258,7 @@ table tfoot tr td:first-child{
   transition: all .15s ease-out;
 }.form-control:focus{
   background: #f8f8f8;
-  border-color: #3498DB;
+  border-color: #282828;
   outline: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -271,12 +271,12 @@ table tfoot tr td:first-child{
    transition: all 300ms ease-in-out;
 }.btn-primary {
     color: #fff;
-    background-color: #51aded;
-    border-color: #3d8fd8
+    background-color: #282828;
+    border-color: #282828
 }.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active{
     color: #fff;
-    background-color: #3175b8;
-    border-color: #3d8fd8
+    background-color: #282828;
+    border-color: #282828
 }.btn-success{
    background-color:#2ecc71
 }.btn-success:hover, .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active{
