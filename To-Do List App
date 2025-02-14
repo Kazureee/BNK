@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyN9pNUeZNdlIkjsIfspPoLL",
+      "authorship_tag": "ABX9TyPqAQe4L3Lr4JoEqiIMr/Ix",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -28,12 +28,122 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 1,
       "metadata": {
-        "id": "zqDyJ25WoE0s"
+        "id": "zqDyJ25WoE0s",
+        "outputId": "bd7468bb-350a-445d-c6f3-b7cbfa60fa72",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
       },
-      "outputs": [],
-      "source": []
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "To-Do List Options:\n",
+            "1. Add Task\n",
+            "2. Mark Task as Done\n",
+            "3. Remove Task\n",
+            "4. View Tasks\n",
+            "5. Exit\n",
+            "Enter your choice: 1\n",
+            "Enter the task: Edit\n",
+            "Task 'Edit' added!\n",
+            "\n",
+            "To-Do List Options:\n",
+            "1. Add Task\n",
+            "2. Mark Task as Done\n",
+            "3. Remove Task\n",
+            "4. View Tasks\n",
+            "5. Exit\n",
+            "Enter your choice: 4\n",
+            "\n",
+            "Your To-Do List:\n",
+            "1. Edit - ⏳ Pending\n",
+            "\n",
+            "To-Do List Options:\n",
+            "1. Add Task\n",
+            "2. Mark Task as Done\n",
+            "3. Remove Task\n",
+            "4. View Tasks\n",
+            "5. Exit\n",
+            "Enter your choice: 5\n",
+            "Exiting To-Do List. Goodbye!\n"
+          ]
+        }
+      ],
+      "source": [
+        "def display_tasks(tasks):\n",
+        "    \"\"\"Displays the current tasks in the to-do list.\"\"\"\n",
+        "    if not tasks:\n",
+        "        print(\"\\nNo tasks available!\")\n",
+        "    else:\n",
+        "        print(\"\\nYour To-Do List:\")\n",
+        "        for num, (task, status) in enumerate(tasks.items(), 1):\n",
+        "            print(f\"{num}. {task} - {'✓ Done' if status else '⏳ Pending'}\")\n",
+        "\n",
+        "def add_task(tasks, task):\n",
+        "    \"\"\"Adds a new task to the to-do list.\"\"\"\n",
+        "    tasks[task] = False\n",
+        "    print(f\"Task '{task}' added!\")\n",
+        "\n",
+        "def mark_done(tasks, task):\n",
+        "    \"\"\"Marks a task as done.\"\"\"\n",
+        "    if task in tasks:\n",
+        "        tasks[task] = True\n",
+        "        print(f\"Task '{task}' marked as done!\")\n",
+        "    else:\n",
+        "        print(f\"Task '{task}' not found.\")\n",
+        "\n",
+        "def remove_task(tasks, task):\n",
+        "    \"\"\"Removes a task from the to-do list.\"\"\"\n",
+        "    if task in tasks:\n",
+        "        del tasks[task]\n",
+        "        print(f\"Task '{task}' removed!\")\n",
+        "    else:\n",
+        "        print(f\"Task '{task}' not found.\")\n",
+        "\n",
+        "def main():\n",
+        "    tasks = {}\n",
+        "    while True:\n",
+        "        print(\"\\nTo-Do List Options:\")\n",
+        "        print(\"1. Add Task\")\n",
+        "        print(\"2. Mark Task as Done\")\n",
+        "        print(\"3. Remove Task\")\n",
+        "        print(\"4. View Tasks\")\n",
+        "        print(\"5. Exit\")\n",
+        "\n",
+        "        choice = input(\"Enter your choice: \")\n",
+        "\n",
+        "        if choice == \"1\":\n",
+        "            task = input(\"Enter the task: \")\n",
+        "            add_task(tasks, task)\n",
+        "        elif choice == \"2\":\n",
+        "            task = input(\"Enter the task to mark as done: \")\n",
+        "            mark_done(tasks, task)\n",
+        "        elif choice == \"3\":\n",
+        "            task = input(\"Enter the task to remove: \")\n",
+        "            remove_task(tasks, task)\n",
+        "        elif choice == \"4\":\n",
+        "            display_tasks(tasks)\n",
+        "        elif choice == \"5\":\n",
+        "            print(\"Exiting To-Do List. Goodbye!\")\n",
+        "            break\n",
+        "        else:\n",
+        "            print(\"Invalid choice. Please enter a number between 1 and 5.\")\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    main()\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "efA63SdKom9W"
+      }
     }
   ]
 }
